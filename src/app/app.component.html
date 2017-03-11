@@ -1,3 +1,19 @@
 <h1>
   {{title}}
 </h1>
+
+<div>
+
+  <ul>
+    <li *ngFor="let review of reviews">
+      <app-simple-form
+        [userId] = "review.user_id"
+        [query] = "review.query"
+        [responses]="review.responses"
+        [history]="review.history"
+      >
+      </app-simple-form>
+    </li>
+  </ul>
+
+</div>
