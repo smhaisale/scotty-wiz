@@ -1,0 +1,13 @@
+<div class="dialogHistory">
+  <b>Dialog History </b> :
+  <ul>
+    <li *ngFor="let dialog of history">
+      <div style="width:600px; padding:2px;">
+        <div class="dialogBox" [ngClass]="{systemDialog: dialog.source === 'system'}">
+          {{dialog.text}}
+        </div>
+        <div style="clear:both" ></div>
+      </div>
+    </li>
+  </ul>
+</div>

@@ -10,14 +10,13 @@ import {Http} from "@angular/http";
     <br />
     <b>Input </b> : {{query}}
     <br />
-    <b>Dialog History </b> :
-    <ul>
-      <li *ngFor="let dialog of history">{{dialog.source}} : {{dialog.text}}</li>
-    </ul>
+    
     <br />
     <b>Response Options </b> :
     <ul>
-      <li *ngFor="let response of responses" (click)="onClickOption(response)">{{response}}</li>
+      <li *ngFor="let response of responses" (mouseover)="fontWeight(bold())" (click)="onClickOption(response)">
+        {{response}}
+      </li>
     </ul>
     <br />
     <input #myInput type="text" [(ngModel)]="selectedResponse">
@@ -35,6 +34,10 @@ export class SimpleFormComponent implements OnInit {
   @Input() history;
   selectedResponse = "";
   wozUrl = 'http://54.175.153.240/woz';
+
+  getDialogClass(dialog) {
+    return "dialogBox " + (dialog.source === 'system') ? "systemDialog" : "userDialog";
+  }
 
   onClickOption(value) {
     this.selectedResponse = value;

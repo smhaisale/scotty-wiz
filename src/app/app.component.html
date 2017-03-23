@@ -1,6 +1,34 @@
-<h1>
-  {{title}}
-</h1>
+<div id="outerContainer" class="container-fluid">
+  <div class="row">
+    <div id="allDialogsList" class="col-xs-3 app-left-hand-side">
+      <app-dialog-summary-list
+        [reviews] = "reviews"
+      >
+      </app-dialog-summary-list>
+    </div>
+    <div class="col-xs-9">
+      <div id="userInformation" class="row">
+        <h4>This contains all relevant user information</h4>
+        <app-user-information>
+
+        </app-user-information>
+      </div>
+      <div id="dialogInformation" class="row">
+        <h4>This contains the dialog history and other information</h4>
+        <app-dialog-information>
+
+        </app-dialog-information>
+      </div>
+      <div id="dialogActions" class="row">
+        <h4>This contains actions for the woz user to take</h4>
+        <app-dialog-actions>
+
+        </app-dialog-actions>
+      </div>
+    </div>
+  </div>
+</div>
+
 
 <div>
 
