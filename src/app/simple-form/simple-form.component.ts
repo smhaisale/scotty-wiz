@@ -23,7 +23,45 @@ import {Http} from "@angular/http";
     <button (click)="onClick($event, myInput.value)">Confirm</button>
     </div>
   `,
-  styles: []
+  styles: [`
+  :host {
+    display: flex;
+    flex-direction: column;
+  }
+  input:focus {
+  font-style: italic;
+  }
+  button {
+    border: none;
+  }
+  ul {
+    list-style:none;
+    padding-left:0;
+  }
+  div.dialogHistory {
+    overflow: hidden;
+    display: inline-block;
+    background: #D5D5D5;
+    padding: 5px;
+  }
+  div.dialogBox{
+    display: inline-block;
+    box-sizing: border-box;
+    border-radius: 5px;
+    background: #96858F;
+    margin: 5px; 
+    padding: 5px;
+    position: relative;
+  }
+  div.userDialog{
+  margin-left:5px;
+  background: #96858F;
+  }
+  div.systemDialog{
+  float:right;
+  background: #6D7993;
+  }
+  `]
 })
 
 export class SimpleFormComponent implements OnInit {

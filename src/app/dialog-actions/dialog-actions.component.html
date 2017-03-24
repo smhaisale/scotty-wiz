@@ -1,3 +1,18 @@
-<p>
-  dialog-actions works!
-</p>
+<div class="dialogActions row no-gutter">
+  <div class="responseOptions col-xs-5 col-xs-auto">
+    <ul>
+      <li *ngFor="let response of dialog.responses">
+        <button type="button" class="btn btn-danger btn-block" (click)="selectResponse(response)">
+          Response option {{response}}
+        </button>
+
+      </li>
+    </ul>
+  </div>
+
+  <div class="responseControl col-xs-6 col-xs-auto" style="padding:10px;">
+    <textarea id="responseInput" class="form-control" placeholder="Custom Response" [(ngModel)]="selectedResponse"></textarea>
+    <br />
+    <button class="btn btn-success btn-block" style="padding:5px;" (click)="confirmResponse()">Confirm</button>
+  </div>
+</div>

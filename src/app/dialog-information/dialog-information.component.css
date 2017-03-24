@@ -1,0 +1,8 @@
+.dialogInformation {
+  height:90%;
+}
+
+.dialogHistory {
+  height:100%;
+  overflow: scroll;
+}

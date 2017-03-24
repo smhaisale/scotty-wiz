@@ -1,0 +1,13 @@
+.dialogActions {
+  padding-left: 2em;
+}
+
+li {
+  padding: 5px;
+}
+
+input {
+  display: block;
+  box-sizing: border-box;
+  max-width: 100%;
+}

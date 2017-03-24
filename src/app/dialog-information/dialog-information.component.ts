@@ -7,7 +7,7 @@ import {Component, OnInit, Input} from '@angular/core';
 })
 export class DialogInformationComponent implements OnInit {
 
-  @Input() history;
+  @Input() dialog;
 
   constructor() { }
 

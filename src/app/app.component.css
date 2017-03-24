@@ -1,27 +1,35 @@
 #outerContainer {
-  border: 2px black solid;
+  /* border: 2px black solid; */
 }
 
-#allDialogsList {
-  border: 2px red solid;
-  height: 100%;
+#innerContainer {
+  background-image: url("http://blog.spoongraphics.co.uk/wp-content/uploads/2012/textures/24.jpg");
+}
+
+#dialogSummaryList {
+  /* border: 2px red solid; */
+  max-height: 100vh;
   overflow: scroll;
 }
 
 #userInformation {
-  border: 2px pink solid;
-  height: 10%;
+  border: 1px pink solid;
+  min-height: 10vh;
 }
 
 #dialogInformation {
-  border: 2px blue solid;
-  height: 55%;
+  /* border: 2px blue solid; */
+  height: auto;
+  max-height: 65vh;
+  min-height: 35vh;
+  overflow: scroll;
   /* Should sum to 100% with #dialogActions */
 }
 
 #dialogActions {
-  border: 2px green solid;
-  height: 35%;
+  border: 1px pink solid;
+  height: 25vh;
+  overflow: scroll;
   /* Should sum to 100% with #dialogInformation */
 }
 
@@ -35,6 +43,6 @@
 }
 
 div.border {
-  border: 2px yellow solid;
+  /* border: 2px yellow solid; */
   border-radius: 5px;
 }

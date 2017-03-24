@@ -14,6 +14,7 @@ import { DialogSummaryListComponent } from './dialog-summary-list/dialog-summary
 import { UserInformationComponent } from './user-information/user-information.component';
 import { ContainerComponent } from './container/container.component';
 import { DialogActionsComponent } from './dialog-actions/dialog-actions.component';
+import { DialogEntryComponent } from './dialog-entry/dialog-entry.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { DialogActionsComponent } from './dialog-actions/dialog-actions.componen
     DialogSummaryListComponent,
     UserInformationComponent,
     ContainerComponent,
-    DialogActionsComponent
+    DialogActionsComponent,
+    DialogEntryComponent
   ],
   imports: [
     AlertModule.forRoot(),

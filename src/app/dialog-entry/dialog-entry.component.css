@@ -1,0 +1,21 @@
+div.userEntry{
+  margin-left: 10px;
+  margin-right: 90px;
+}
+
+div.systemEntry {
+  float:right;
+  margin-right: 25px;
+  margin-left: 75px;
+}
+
+.dialogEntry{
+  display: inline-block;
+  box-sizing: border-box;
+  border-radius: 5px;
+  margin: 10px;
+  padding: 4px;
+  padding-left: 9px;
+  padding-right: 9px;
+  position: relative;
+}

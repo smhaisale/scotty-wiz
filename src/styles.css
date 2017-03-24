@@ -1,28 +1,28 @@
 /* You can add global styles to this file, and also import other style files */
 
 #outerContainer {
-  border: 2px black solid;
+  /* border: 2px black solid; */
 }
 
 #allDialogsList {
-  border: 2px red solid;
+  /* border: 2px red solid; */
   height: 100%;
   overflow: scroll;
 }
 
 #userInformation {
-  border: 2px pink solid;
+  /* border: 2px pink solid; */
   height: 10%;
 }
 
 #dialogInformation {
-  border: 2px blue solid;
+  /* border: 2px blue solid; */
   height: 55%;
   /* Should sum to 100% with #dialogActions */
 }
 
 #dialogActions {
-  border: 2px green solid;
+  /* border: 2px green solid; */
   height: 35%;
   /* Should sum to 100% with #dialogInformation */
 }
@@ -37,6 +37,22 @@
 }
 
 div.border {
-  border: 2px yellow solid;
+  /* border: 2px yellow solid; */
   border-radius: 5px;
+}
+
+.no-gutter > [class*='col-'] {
+  padding-right:0;
+  padding-left:0;
+}
+
+.text-shrink {
+  overflow: hidden;
+  white-space: nowrap; /* Don't forget this one */
+  text-overflow: ellipsis;
+}
+
+ul {
+  list-style:none;
+  padding-left:0;
 }

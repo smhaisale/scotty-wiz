@@ -1,47 +1,37 @@
+<head>
+  <meta name="viewport" content="width=device-width; initial-scale=1" charset="UTF-8" />
+</head>
+
 <div id="outerContainer" class="container-fluid">
-  <div class="row">
-    <div id="allDialogsList" class="col-xs-3 app-left-hand-side">
+  <div class="row no-gutter">
+    <div id="dialogSummaryList" class="col-xs-3 app-left-hand-side">
       <app-dialog-summary-list
         [reviews] = "reviews"
+        [selectedReview]="selectedReview"
+        (selectReview)="select($event)"
       >
       </app-dialog-summary-list>
     </div>
-    <div class="col-xs-9">
+    <div class="col-xs-9 col-xs-auto" id="innerContainer" style="padding-left:1em;">
       <div id="userInformation" class="row">
-        <h4>This contains all relevant user information</h4>
-        <app-user-information>
-
+        <h4>User Information Panel</h4>
+        <app-user-information
+          [userId] = "selectedReview.userId">
         </app-user-information>
       </div>
       <div id="dialogInformation" class="row">
-        <h4>This contains the dialog history and other information</h4>
-        <app-dialog-information>
-
+        <h4>Dialog Information Panel for {{selectedReview.userId}}</h4>
+        <app-dialog-information
+          [dialog] = "selectedReview"
+        >
         </app-dialog-information>
       </div>
       <div id="dialogActions" class="row">
-        <h4>This contains actions for the woz user to take</h4>
-        <app-dialog-actions>
-
+        <app-dialog-actions
+          [dialog] = "selectedReview"
+        >
         </app-dialog-actions>
       </div>
     </div>
   </div>
-</div>
-
-
-<div>
-
-  <ul>
-    <li *ngFor="let review of reviews">
-      <app-simple-form
-        [userId] = "review.user_id"
-        [query] = "review.query"
-        [responses]="review.responses"
-        [history]="review.history"
-      >
-      </app-simple-form>
-    </li>
-  </ul>
-
 </div>

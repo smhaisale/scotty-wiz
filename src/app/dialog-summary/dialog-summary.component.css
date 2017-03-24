@@ -1,0 +1,27 @@
+
+div {
+  overflow:hidden;
+}
+
+.dialogSummary {
+  min-width: 12em;
+  padding-left: 1em;
+}
+
+.img-col{
+  min-width:2.5em;
+}
+
+img.user-icon-image {
+  width:3em;
+  height:auto;
+}
+
+label{
+  font-size: smaller;
+}
+
+label.right-align {
+  clear:both;
+  float:right;
+}

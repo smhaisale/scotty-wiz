@@ -1,0 +1,9 @@
+<div class="dialogEntry text-white"
+[ngClass]="entry.source === 'system' ?
+'systemEntry bg-primary text-white' :
+'userEntry bg-danger text-white'">
+  <div style="clear:both;">
+    {{entry.text}}
+  </div>
+</div>
+<div style="clear:both;" ></div>
