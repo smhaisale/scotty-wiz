@@ -1,5 +1,7 @@
-import {Component, Inject} from '@angular/core';
-import {Response, Http} from "@angular/http";
+import { Component, Inject } from '@angular/core';
+import { Response, Http } from "@angular/http";
+import { SocketService } from "./socket.service";
+import { StompService } from 'ng2-stomp-service';
 
 @Component({
   selector: 'app-root',
@@ -13,13 +15,38 @@ export class AppComponent {
   selectedReview = {};
   wozUrl = 'https://www.smhaisale.com/woz';
 
-  constructor(
-    @Inject('mail') private mail,
-    private http: Http
-  ) {
+  public messages: Array<any>;
+
+  constructor(@Inject('mail') private mail, @Inject('socket') private socket, private http: Http) {
+    this.messages = [];
     this.refresh();
-    console.log(this.reviews);
   }
+
+  // public ngOnInit() {
+  //   this.socket.getEventListener().subscribe(event => {
+  //     if(event.type == "message") {
+  //       this.messages.push(event.data);
+  //     }
+  //     if(event.type == "close") {
+  //       this.messages.push("/The socket connection has been closed");
+  //     }
+  //     if(event.type == "open") {
+  //       this.messages.push("/The socket connection has been established");
+  //     }
+  //   });
+  // }
+  //
+  // public ngOnDestroy() {
+  //   this.socket.close();
+  // }
+  //
+  // public send() {
+  //
+  //   //if(this.chatBox) {
+  //     //this.socket.send(this.chatBox);
+  //     //this.chatBox = "";
+  //   //}
+  // }
 
   select(review) {
     console.log(review);
@@ -31,7 +58,6 @@ export class AppComponent {
       .subscribe(data => {
         this.reviews = data.json();
         this.selectedReview = this.reviews[0];
-        this.updateScroll();
       });
   }
 
@@ -72,10 +98,5 @@ export class AppComponent {
     }
 
     return reviews;
-  }
-
-  updateScroll(){
-    var element = document.getElementById("dialogInformation");
-    element.scrollTop = element.scrollHeight;
   }
 }

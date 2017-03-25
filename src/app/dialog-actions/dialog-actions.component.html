@@ -2,7 +2,7 @@
   <div class="responseOptions col-xs-5 col-xs-auto">
     <ul>
       <li *ngFor="let response of dialog.responses">
-        <button type="button" class="btn btn-danger btn-block" (click)="selectResponse(response)">
+        <button type="button" class="btn btn-danger btn-block" data-toggle="toggle" (click)="selectResponse(response)">
           {{response}}
         </button>
 

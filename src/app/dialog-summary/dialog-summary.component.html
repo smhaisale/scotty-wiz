@@ -5,7 +5,9 @@
   </div>
   <div class="col-xs-6 col-xs-auto name-col">
     <label class="text-shrink">{{review.userId}}</label>
-    <label class="text-shrink">what are you even talking about</label>
+    <label class="text-shrink">
+      {{review.dialogInformation.dialogHistory[0].text}}
+    </label>
   </div>
   <div class="col-xs-3" style="text-align: right;">
     <label>9:40am</label>

@@ -5,7 +5,9 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { SimpleFormComponent } from './simple-form/simple-form.component';
-import {MailService} from "./mail.service";
+import { MailService } from "./mail.service";
+import { SocketService } from "./socket.service";
+import { StompService } from 'ng2-stomp-service';
 
 import { AlertModule } from 'ng2-bootstrap/ng2-bootstrap';
 import { DialogSummaryComponent } from './dialog-summary/dialog-summary.component';
@@ -36,6 +38,7 @@ import { DialogEntryComponent } from './dialog-entry/dialog-entry.component';
   ],
   providers: [
     {provide:'mail', useClass:MailService},
+    {provide:'socket', useClass:SocketService},
     {provide:'http', useClass:HttpModule}
   ],
   bootstrap: [AppComponent]

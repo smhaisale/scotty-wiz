@@ -13,13 +13,13 @@
       </app-dialog-summary-list>
     </div>
     <div class="col-xs-9 col-xs-auto" id="innerContainer" style="padding-left:1em;">
-      <div id="userInformation" class="row">
+      <div id="userInformation" style="padding-left:1em;" class="row">
         <h4>User Information Panel</h4>
         <app-user-information
           [userId] = "selectedReview.userId">
         </app-user-information>
       </div>
-      <div id="dialogInformation" class="row">
+      <div id="dialogInformation" style="padding-left:1em;" class="row">
         <h4>Dialog Information Panel for {{selectedReview?.dialogInformation}}</h4>
         <app-dialog-information
           [dialog] = "selectedReview.dialogInformation"

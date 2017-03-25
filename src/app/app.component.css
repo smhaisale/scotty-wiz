@@ -20,15 +20,14 @@
 #dialogInformation {
   /* border: 2px blue solid; */
   height: auto;
-  max-height: 65vh;
-  min-height: 35vh;
+  height: 60vh;
   overflow: scroll;
   /* Should sum to 100% with #dialogActions */
 }
 
 #dialogActions {
   border: 1px pink solid;
-  height: 25vh;
+  height: 30vh;
   overflow: scroll;
   /* Should sum to 100% with #dialogInformation */
 }
