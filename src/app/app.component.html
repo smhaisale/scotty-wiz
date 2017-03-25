@@ -20,9 +20,9 @@
         </app-user-information>
       </div>
       <div id="dialogInformation" class="row">
-        <h4>Dialog Information Panel for {{selectedReview.userId}}</h4>
+        <h4>Dialog Information Panel for {{selectedReview?.dialogInformation}}</h4>
         <app-dialog-information
-          [dialog] = "selectedReview"
+          [dialog] = "selectedReview.dialogInformation"
         >
         </app-dialog-information>
       </div>

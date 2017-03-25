@@ -29,7 +29,7 @@ export class AppComponent {
   refresh() {
     this.http.get(this.wozUrl)
       .subscribe(data => {
-        this.reviews = this.getLocals();
+        this.reviews = data.json();
         this.selectedReview = this.reviews[0];
         this.updateScroll();
       });

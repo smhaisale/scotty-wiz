@@ -1,7 +1,7 @@
 <div class="dialogInformation">
   <div class="dialogHistory">
     <ul>
-      <li *ngFor="let entry of dialog.history">
+      <li *ngFor="let entry of dialog?.dialogHistory">
         <app-dialog-entry
           [entry]="entry">
 
